@@ -1,0 +1,91 @@
+.NavigationBar {
+  height: 100vh;
+  background-color: rgba(0,0,0,.5);
+  width: 220px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: auto;
+  min-height: 0!important;
+  overflow: hidden;
+  &__nav {
+    padding: 24px 24px 95px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+    &__list {
+      margin-top: 20px;
+      &__group {
+        border-top: 1px solid hsla(0,0%,100%,.25);
+        padding-bottom: 10px;
+        padding-top: 10px;
+        &__item {
+          padding: 5px;
+          margin: -5px;
+          font-size: 16px;
+          font-weight: 700;
+          color: $gray;
+          display: block;
+          position: relative;
+          &__icon-search {
+            position: absolute;
+            right: 5px;
+            top: 0px;
+            width: 26px;
+          }
+        }
+        &__link {
+          color: $gray;
+          border: none;
+          margin: 5px 0;
+          padding: 3px 0;
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          -webkit-transition: color .2s;
+          transition: color .2s;
+          text-decoration: none;
+          &.active {
+            color: $green-3;
+          }
+        }
+      }
+    }
+  }
+
+  &__social-github-button {
+    position: absolute;
+    bottom: 60px;
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .Hamburger {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block!important;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .NavigationBar.collapse {
+    height: 72px!important;
+  }
+}

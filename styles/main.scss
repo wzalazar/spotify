@@ -1,0 +1,27 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_animations.scss';
+@import 'helpers/_helpers.scss';
+
+@import 'base/_reset.scss';
+@import 'base/_typography.scss';
+
+@import 'fonts/spotify.scss';
+
+@import './components/Artist.scss';
+@import './components/Album.scss';
+@import './components/SpotifyLogo.scss';
+@import './components/NavigationBar.scss';
+@import './components/Main.scss';
+@import './components/Search.scss';
+@import './components/Input.scss';
+@import './components/Layout.scss';
+@import './components/Results.scss';
+@import './components/ProgressBar.scss';
+@import './components/Track.scss';
+@import './components/ListTrack.scss';
+@import './components/Breadcrumb.scss';
+@import './components/Line.scss';
+@import './components/H2.scss';
+@import './components/H1.scss';
+@import './components/Text.scss';
+@import './components/Hamburger.scss';

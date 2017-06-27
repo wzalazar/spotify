@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'spotify-light';
+	src: url('../static/fonts/Sportify-Light.eot');
+	src: url('../static/fonts/Sportify-Light.eot?#iefix') format('embedded-opentype'),
+		url('../static/fonts/Sportify-Light.woff') format('woff'),
+		url('../static/fonts/Sportify-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'spotify';
+	src: url('../static/fonts/Sportify-Book.eot');
+	src: url('../static/fonts/Sportify-Book.eot?#iefix') format('embedded-opentype'),
+		url('../static/fonts/Sportify-Book.woff') format('woff'),
+		url('../static/fonts/Sportify-Book.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'spotify-bold';
+	src: url('../static/fonts/Sportify-Bold.eot');
+	src: url('../static/fonts/Sportify-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../static/fonts/Sportify-Bold.woff') format('woff'),
+		url('../static/fonts/Sportify-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

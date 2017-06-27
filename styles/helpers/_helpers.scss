@@ -1,0 +1,17 @@
+@media (max-width: $breakpoint-tablet) {
+  .hide_tablet {
+    display: none;
+  }
+  .show_tablet {
+    display: block;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .hide_tablet {
+    display: block;;
+  }
+  .show_tablet {
+    display: none;
+  }
+}

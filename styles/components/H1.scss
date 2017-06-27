@@ -1,0 +1,18 @@
+.H1 {
+  color: $white;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 35px;
+  position: relative;
+  padding-top: 40px;
+  &:after {
+    content: "";
+    height: 2px;
+    width: 18px;
+    position: relative;
+    top: .5em;
+    display: block;
+    margin: 0 auto;
+    background-color: $green-2;
+  }
+}

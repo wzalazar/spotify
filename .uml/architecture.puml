@@ -1,0 +1,74 @@
+@startuml
+skinparam rectangle {
+    roundCorner<<NodeJS>> 25
+}
+
+rectangle "Architecture overview" {
+  rectangle "Server" as server {
+    rectangle "NextJS"
+    rectangle "NodeJS"
+    rectangle "GraphiteJS"
+  }
+
+  rectangle "Single page application" as client {
+    rectangle "ReactJS"
+  }
+
+  rectangle "Isomorphic code" as isomorphic {
+    rectangle "Redux"
+    rectangle "Redux observable" as reduxObservable
+    rectangle "ReactJS"
+  }
+
+  rectangle "Redux overview" as reduxOverview {
+    rectangle "action"
+    rectangle "dispatcher"
+    rectangle "view"
+    rectangle "store"
+  }
+}
+
+cloud {
+  [API Spotify]
+}
+
+note left of [reduxObservable]
+  Redux observable has epics,
+  they are listening async
+  redux actions
+end note
+
+note left of [store]
+  Contain general state
+  of application
+end note
+
+note left of [view]
+  React containers,
+  they are listening changes
+  redux store
+end note
+
+note left of [action]
+  The React containers,
+  dispatch sync/async actions
+end note
+
+note left of [NextJS]
+  The first request is server rendering
+  After that the application is a
+  single application
+end note
+
+server --> isomorphic
+isomorphic --> client
+server --> client : server rendering
+reduxOverview --> Redux
+action -> dispatcher
+dispatcher -> store
+view -> action
+store -> view
+reduxObservable -> Redux #blue
+reduxObservable -> GraphiteJS #blue
+GraphiteJS -> [API Spotify] 
+@enduml

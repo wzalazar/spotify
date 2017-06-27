@@ -1,0 +1,10 @@
+.Main {
+  padding: 0 0 91px 220px;
+  width: 100%;
+  min-height: 0!important;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 72px 0 0 0;
+  }
+}

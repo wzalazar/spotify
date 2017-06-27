@@ -1,0 +1,47 @@
+.Breadcrumb {
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+
+  &__list {
+    text-align: center;
+    &__item {
+      text-align: center;
+      display: inline-block;
+      margin: auto;
+    }
+  }
+
+  &__link {
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: hsla(0,0%,100%,.5);
+    margin: 10px;
+    padding: 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    &:hover {
+      color: $white;
+    }
+    &.active {
+      cursor: default;
+      color: $white;
+    }
+    &.active:after {
+      content: "";
+      height: 2px;
+      width: 18px;
+      position: relative;
+      top: .5em;
+      display: block;
+      margin: 0 auto;
+          background-color: $green-2;
+    }
+  }
+}

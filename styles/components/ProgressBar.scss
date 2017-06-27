@@ -1,0 +1,18 @@
+.ProgressBar {
+  &__content {
+    position: relative;
+    &__bar {
+      height: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__circle {
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 15px;
+      right: 10px
+    }
+  }
+}

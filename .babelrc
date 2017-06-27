@@ -1,0 +1,34 @@
+{
+  "env": {
+    "development": {
+      "presets": "next/babel",
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "babel-plugin-transform-async-to-generator",
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    },
+    "production": {
+      "presets": "next/babel",
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "babel-plugin-transform-async-to-generator",
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        "next/babel"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "babel-plugin-transform-async-to-generator",
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    }
+  },
+}

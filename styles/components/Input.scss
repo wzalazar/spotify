@@ -1,0 +1,16 @@
+.Input {
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-fill-color: transparent;
+    text-shadow: 0px 0px 0px white;
+    &:focus {
+      outline: none!important;
+    }
+    &:placeholder-shown {
+      text-shadow: 0px 0px 0px $gray-3;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+*.log
+node_modules
+coverage
+dist
+.build
+.DS_Store
+.next
+next
+.coverage
+.build
+.e2e/reports/**/*
+.e2e/screenshots/**/*
+.e2e/drivers/chromedriver
+.e2e/drivers/geckodriver
+.e2e/drivers/phantomjs
+.e2e/drivers/selenium-server-standalone-3.4.0.jar

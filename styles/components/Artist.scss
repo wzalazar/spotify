@@ -1,0 +1,125 @@
+.Artist {
+  cursor: pointer;
+  max-width: 350px;
+  position: relative;
+  width: 25%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &.loaded:hover {
+    .Artist__icon__play {
+      display: block!important;
+      &:hover {
+        border-color: $white;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  :hover {
+    .Artist__image {
+      -webkit-filter: brightness(.3);
+      filter: brightness(.3);
+    }
+  }
+
+  &__cover {
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 0;
+    display: block;
+    border: 0;
+    outline: 0;
+    position: relative;
+    background-color: $gray-2;
+    border-radius: 50%;
+    padding-top: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 25%;
+    left: 27%;
+    width: 50%;
+  }
+
+  &__icon__play {
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 62px;
+    height: 62px;
+    margin-left: -31px;
+    margin-top: -31px;
+    top: 50%;
+    left: 50%;
+    color: $white;
+    border: 1px solid $gray;
+    border-radius: 500px;
+    box-sizing: content-box;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(0,0,0,2.41);
+    transition: all .3s cubic-bezier(0,0,0,2.41);
+    &__svg {
+      -webkit-transform: scale(.5);
+      transform: scale(.5);
+      width: 100%;
+      height: 100%;
+      margin-left: 4px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover!important;
+    background-position: 50%;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    border-radius: 50%;
+    opacity: 0;
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    color: $white;
+    display: block;
+    display: -webkit-box;
+    margin: 12px 0 4px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    &__name {
+      border-bottom: none;
+      font-size: 1.1em;
+      font-family: 'spotify-light';
+      line-height: 1.2;
+      max-height: 2.64em;
+      min-height: 42px;
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    width: 33%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 50%;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    margin: auto;
+    float: none;
+    width: 100%;
+  }
+}

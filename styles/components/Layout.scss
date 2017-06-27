@@ -1,0 +1,19 @@
+.Layout {
+  &__content {
+    padding: 40px;
+  }
+
+  &__cover {
+    background-image: linear-gradient(rgb(18, 18, 18), rgb(7, 7, 7) 85%);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    position: fixed;
+    will-change: transform;
+    &.on-track {
+      background-image: linear-gradient(rgb(54, 41, 28), rgb(10, 7, 5) 85%)!important;
+    }
+  }
+}
