@@ -27,7 +27,7 @@ yarn start:dev
 
 ## Demo
 
-Latest deploy [view](https://spotify-graphitejs-bwkuamidvu.now.sh)
+Latest deploy [view](https://spotify-graphitejs-andatzkaem.now.sh)
 
 ## Stack technology
 
