@@ -25,11 +25,11 @@ yarn start:dev
 **URL default http://localhost:3000**
 
 
-### Demo
+## Demo
 
 Latest deploy [view](https://spotify-graphitejs-bwkuamidvu.now.sh)
 
-### Stack technology
+## Stack technology
 
   1. NextJS [View](https://github.com/zeit/next.js/)
   2. React [View](https://github.com/facebook/react)
@@ -38,12 +38,12 @@ Latest deploy [view](https://spotify-graphitejs-bwkuamidvu.now.sh)
   4. GraphiteJS [View](https://github.com/graphitejs/graphitejs)
 
 
-### Architecture
+## Architecture
 
   The design the architecture is [here](https://github.com/wzalazar/spotify/blob/master/.uml/architecture.png)
 
 
-### Commands
+## Commands
 
 ```bash
 
