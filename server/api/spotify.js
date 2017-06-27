@@ -30,7 +30,7 @@ class Spotify {
 
   async getArtist(artistId, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       return this.spotifyApi.getArtist(artistId, options);
     } catch (error) {
       return error;
@@ -39,7 +39,7 @@ class Spotify {
 
   async getAlbumsByArtist(artistId, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       return this.spotifyApi.getArtistAlbums(artistId, options);
     } catch (error) {
       return error;
@@ -48,7 +48,7 @@ class Spotify {
 
   async getTracksByAlbum(albumId, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       return this.spotifyApi.getAlbumTracks(albumId, options);
     } catch (error) {
       return error;
@@ -57,7 +57,7 @@ class Spotify {
 
   async searchArtist(word, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       return this.spotifyApi.searchArtists(word, options);
     } catch (error) {
       return error;
@@ -66,7 +66,7 @@ class Spotify {
 
   async searchAlbum(word, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       const { limit, offset } = options;
       return fetch(`https://api.spotify.com/v1/search?q=${word}&type=album&limit=${limit}&offset=${offset}`, {
         method: 'get',
@@ -82,7 +82,7 @@ class Spotify {
 
   async searchTracks(word, options) {
     try {
-      if (!this.token) await this.requestToken();
+      await this.requestToken();
       return this.spotifyApi.searchTracks(word, options);
     } catch (error) {
       return error;
