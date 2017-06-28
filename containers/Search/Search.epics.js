@@ -23,7 +23,7 @@ export const searchTrackEpic = (action$, store, graphql) =>
   action$.ofType(SEARCH_TRACKS_BY_ALBUM)
       .debounceTime(250)
       .mergeMap(action => graphql(action.payload.query, { album: action.payload.album })
-      .map(({ response }) => onSearchTracksByAlbumSuccess(response.data.track))
+      .map(({ response }) => onSearchTracksByAlbumSuccess(response.data.tracksByAlbumId))
       .takeUntil(action$.ofType(SEARCH_TRACKS_BY_ALBUM_CANCELLED))
       .catch(error => Observable.of(onSearchTracksByAlbumError(error.xhr.response)))
     );

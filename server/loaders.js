@@ -26,7 +26,14 @@ export const loaderTracksByAlbum = new DataLoader(async (keys) => {
 
 export const loaderAlbum = new DataLoader(async (keys) => {
   return Promise.all(keys.map(async (key) => {
-    const response = await spotify.spotify.searchAlbum(key);
+    const response = await spotify.searchAlbum(key);
     return await response.json();
+  }));
+});
+
+export const loaderTracks = new DataLoader(async (keys) => {
+  return Promise.all(keys.map(async (key) => {
+    const response = await spotify.searchTracks(key);
+    return await response.body;
   }));
 });

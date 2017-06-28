@@ -1,6 +1,6 @@
 export const getTrack = `
-  query getTrack($album: String) {
-    track(_id: $album) {
+  query getTrackByAlbumId($album: String!) {
+    tracksByAlbumId(id: $album) {
       _id
      name
      disc_number

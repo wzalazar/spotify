@@ -50,10 +50,10 @@ class Album {
     }
   }
 
-  @query()
-  async album(_, { _id }) {
+  @query('name: String!')
+  async album(_, { name }) {
     try {
-      const data = await loaderAlbum.load(_id);
+      const data = await loaderAlbum.load(name);
       const items = get(data, 'albums.items', []);
       return items.map(item => this.mapAlbum(item));
     } catch (error) {

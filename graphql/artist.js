@@ -1,6 +1,6 @@
 export const getArtist = `
-  query getArtist($artist: String) {
-    artist(_id: $artist) {
+  query getArtist($artist: String!) {
+    artist(name: $artist) {
      _id
      name
      image {

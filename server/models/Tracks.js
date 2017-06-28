@@ -2,6 +2,7 @@ import { property, graphQl, query, hasMany } from '@graphite/decorators';
 import { get } from 'lodash';
 import spotify from '../api/spotify';
 import artists from './Artists';
+import { loaderTracks } from '../loaders';
 
 @graphQl
 class Track {
@@ -34,10 +35,24 @@ class Track {
     }
   }
 
-  @query()
-  async track(_, { _id, limit = 10, skip = 0 }) {
+  @query('name: String!')
+  async track(_, { name }) {
     try {
-      const data = await spotify.getTracksByAlbum(_id, { limit, offset: skip });
+      const data = await loaderTracks.load(name);
+      const items = get(data, 'tracks.items', []);
+      return items.map(track => this.mapTrack(track));
+    } catch (error) {
+      return error;
+    }
+  }
+
+  @query({
+    fields: 'id: String!',
+    responseType: 'Track',
+  })
+  async tracksByAlbumId(_, { id }) {
+    try {
+      const data = await spotify.getTracksByAlbum(id);
       const items = get(data, 'body.items', []);
       return items.map(track => this.mapTrack(track));
     } catch (error) {

@@ -27,7 +27,7 @@ yarn start:dev
 
 ## Demo
 
-Latest deploy [view](https://spotify-graphitejs-andatzkaem.now.sh)
+Latest deploy [view](https://spotify-graphitejs-scbvotbkhb.now.sh)
 
 ## Stack technology
 
@@ -60,6 +60,58 @@ yarn **command**
 | start            | Run project production, required build                                                |  
 | start:dev        | Run project development                                                               |
 | build            | Generate build                                                                        |
+
+
+## GraphQl [view](https://spotify-graphitejs-scbvotbkhb.now.sh/graphiql
+
+
+### Queries
+
+```bash
+
+query getArtist($artist: String!) {
+    artist(name: $artist) {
+        _id
+        name
+    }
+}
+
+query getAlbum($album: String!) {
+    album(name: $album) {
+        _id
+        name
+    }
+}
+
+query getTrack($track: String!) {
+    track(name: $track) {
+        _id
+        name
+    }
+}
+
+query getTracksByAlbum($albumId: String!) {
+    tracksByAlbumId(id: $albumId) {
+        _id
+        name
+    }
+}
+
+
+```
+
+### Variables
+
+```bash
+
+{
+  "artist": "Shakira",
+  "album": "show",
+  "track": "Hi",
+  "albumId": "2cWBwpqMsDJC1ZUwz813lo"
+}
+
+```
 
 
 

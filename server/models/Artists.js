@@ -40,10 +40,10 @@ class Artist {
     }
   }
 
-  @query()
-  async artist(_, { _id }) {
+  @query('name: String!')
+  async artist(_, { name }) {
     try {
-      const data = await loaderSearchArtist.load(_id);
+      const data = await loaderSearchArtist.load(name);
       const items = get(data, 'artists.items', []);
       return items.map(artist => this.mapArtist(artist));
     } catch (error) {

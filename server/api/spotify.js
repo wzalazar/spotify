@@ -64,11 +64,10 @@ class Spotify {
     }
   }
 
-  async searchAlbum(word, options) {
+  async searchAlbum(word) {
     try {
       await this.requestToken();
-      const { limit, offset } = options;
-      return fetch(`https://api.spotify.com/v1/search?q=${word}&type=album&limit=${limit}&offset=${offset}`, {
+      return fetch(`https://api.spotify.com/v1/search?q=${word}&type=album`, {
         method: 'get',
         headers: {
           'Content-Type': 'application/json',
