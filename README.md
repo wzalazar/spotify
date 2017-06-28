@@ -62,7 +62,7 @@ yarn **command**
 | build            | Generate build                                                                        |
 
 
-## GraphQl [view](https://spotify-graphitejs-scbvotbkhb.now.sh/graphiql
+## GraphQl [view](https://spotify-graphitejs-scbvotbkhb.now.sh/graphiql)
 
 
 ### Queries
