@@ -5,6 +5,9 @@
 
 Example with GraphiteJS, framework graphql. In this example, you will able to search an artist, select artist, select album, and play the preview track.
 
+<br />
+<br />
+
 ## How to use
 
 Download the example [or clone the repo](https://github.com/wzalazar/spotify):
@@ -24,10 +27,15 @@ yarn start:dev
 
 **URL default http://localhost:3000**
 
+<br />
+<br />
 
 ## Demo
 
 Latest deploy [view](https://spotify-graphitejs-scbvotbkhb.now.sh)
+
+<br />
+<br />
 
 ## Stack technology
 
@@ -38,10 +46,16 @@ Latest deploy [view](https://spotify-graphitejs-scbvotbkhb.now.sh)
   4. GraphiteJS [View](https://github.com/graphitejs/graphitejs)
 
 
+<br />
+<br />
+
+
 ## Architecture
 
   The design the architecture is [here](https://github.com/wzalazar/spotify/blob/master/.uml/architecture.png)
 
+<br />
+<br />
 
 ## Commands
 
@@ -61,9 +75,12 @@ yarn **command**
 | start:dev        | Run project development                                                               |
 | build            | Generate build                                                                        |
 
+<br />
+<br />
 
-## GraphQl [view](https://spotify-graphitejs-scbvotbkhb.now.sh/graphiql)
+## GraphQl
 
+Can you check the [graphiql](https://spotify-graphitejs-scbvotbkhb.now.sh/graphiql)
 
 ### Queries
 
@@ -113,7 +130,8 @@ query getTracksByAlbum($albumId: String!) {
 
 ```
 
-
+<br />
+<br />
 
 
 Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
@@ -122,6 +140,8 @@ Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.
 now
 ```
 
+<br />
+<br />
 
 ## License
 
