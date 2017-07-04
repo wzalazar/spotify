@@ -1,10 +1,13 @@
 import { Component } from 'react';
+import { connect} from 'react-redux';
 import Main from '../../components/Main/Main';
 import Search from '../Search/Search.container';
 import Results from '../Results/Results.container';
 
-
-export default class MainContainer extends Component {
+@connect(({ results }) => ({
+  results,
+}))
+class MainContainer extends Component {
   constructor() {
     super();
   }
@@ -18,3 +21,5 @@ export default class MainContainer extends Component {
     );
   }
 }
+
+export default MainContainer;
