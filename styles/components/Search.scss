@@ -1,19 +1,19 @@
 .Search {
   position: relative;
   background-color: $gray-4;
-  padding: 1.5em 2em;
+  padding: 12px 2em;
 
   &__title {
     color: $white;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: .5em;
   }
 
   &__input {
     color: $green-2;
-    font-weight: 700;
-    font-size: 62px;
+    font-weight: 70;
+    font-size: 40px;
     line-height: 1.2;
     text-shadow: 0 0 0 $white;
     -webkit-text-fill-color: transparent;
