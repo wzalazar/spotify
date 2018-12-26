@@ -7,6 +7,7 @@ import Layout from '../containers/Layout/Layout.container';
 import { onSetConfig } from '../config/config.actions';
 import load from 'load-script';
 import initReactFastclick from 'react-fastclick';
+import '../styles/main.scss'
 initReactFastclick();
 
 

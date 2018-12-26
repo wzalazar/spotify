@@ -1,29 +1,22 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-import flush from 'styled-jsx/server';
-import stylesheet from '../styles/main.scss';
+import Document, { Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
-
-  static getInitialProps({ renderPage }) {
-    const { html, head, chunks } = renderPage();
-    const styles = flush();
-    return { html, head, styles, chunks };
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
     return (
-     <html>
-       <Head>
-         <title>Spotify - GraphiteJS</title>
-         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-         <meta name="viewport" content="width=device-width" />
-       </Head>
-       <body>
-         {this.props.customValue}
-         <Main />
-         <NextScript />
-       </body>
-     </html>
-    );
+      <html>
+        <Head>
+          <style>{`body { margin: 0 } /* custom! */`}</style>
+        </Head>
+        <body className="custom_class">
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    )
   }
 }

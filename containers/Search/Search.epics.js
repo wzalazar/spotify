@@ -1,4 +1,4 @@
-import 'rxjs';
+import { Observable } from 'rxjs';
 import {
   SEARCH,
   SEARCH_CANCELLED,

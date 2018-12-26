@@ -1,34 +1,18 @@
 {
-  "env": {
-    "development": {
-      "presets": "next/babel",
-      "plugins": [
-        "transform-decorators-legacy",
-        "transform-class-properties",
-        "babel-plugin-transform-async-to-generator",
-        "babel-plugin-transform-es2015-modules-commonjs"
-      ]
-    },
-    "production": {
-      "presets": "next/babel",
-      "plugins": [
-        "transform-decorators-legacy",
-        "transform-class-properties",
-        "babel-plugin-transform-async-to-generator",
-        "babel-plugin-transform-es2015-modules-commonjs"
-      ]
-    },
-    "test": {
-      "presets": [
-        ["env", { "modules": "commonjs" }],
-        "next/babel"
-      ],
-      "plugins": [
-        "transform-decorators-legacy",
-        "transform-class-properties",
-        "babel-plugin-transform-async-to-generator",
-        "babel-plugin-transform-es2015-modules-commonjs"
-      ]
-    }
-  },
+  "presets": [
+    ["next/babel", {
+        "styled-jsx": { "plugins": ["styled-jsx-plugin-sass"] }
+      }
+    ]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-syntax-dynamic-import",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-nullish-coalescing-operator",
+    "@babel/plugin-transform-async-to-generator",
+    ["module-resolver", { "root": ["./"] }]
+  ]
 }

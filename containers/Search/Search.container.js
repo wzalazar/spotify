@@ -80,9 +80,9 @@ class SearchContainer extends Component {
     const { isSearching } = search;
     const placeholder = 'Search...';
 
-    const showProgressBar = isSearching ? (
-      <ProgressBar show />
-    ) : null;
+    // const showProgressBar = isSearching ? (
+    //   <ProgressBar show />
+    // ) : null;
 
     const items = [{
       label: 'Artists',
@@ -117,7 +117,7 @@ class SearchContainer extends Component {
                 placeholder={placeholder}
                 value={searchArtist} />
 
-        {showProgressBar}
+        {/* {showProgressBar} */}
         {showBreadcrumb}
       </div>
     );
