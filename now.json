@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "type": "docker",
+  "features": {
+    "cloud": "v1"
+  },
+  "name": "spotify-demo"
+}
