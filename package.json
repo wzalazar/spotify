@@ -101,10 +101,5 @@
       "pages/**/*.js",
       "sever/**/*.js"
     ]
-  },
-  "now": {
-    "engines": {
-      "node": "8.1.2"
-    }
   }
 }
