@@ -9,7 +9,7 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint -f table ./components ./config ./containers ./lib ./pages ./server || exit 1",
-    "start": "NODE_ENV=production node_modules/babel-cli/bin/babel-node.js ./server.js",
+    "start": "NODE_ENV=production next start",
     "start:dev": "node -r @babel/register ./server.js",
     "build": "next build",
     "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png"
@@ -101,10 +101,5 @@
       "pages/**/*.js",
       "sever/**/*.js"
     ]
-  },
-  "now": {
-    "engines": {
-      "node": "8.1.2"
-    }
   }
 }
