@@ -10,4 +10,4 @@ EXPOSE $PORT
 
 RUN npm run build
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
