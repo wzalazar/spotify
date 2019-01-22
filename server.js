@@ -39,31 +39,3 @@ const main = async () => {
 }
 
 main()
-
-// app.prepare()
-// .then(() => {
-//   graphQLServer.get('/', async (req, res) => {
-//     const actualPage = '/index'
-//     app.render(req, res, actualPage)
-//   })
-
-//   graphQLServer.get('/about', async (req, res) => {
-//     const actualPage = '/about'
-//     app.render(req, res, actualPage)
-//   })
-
-//   graphQLServer.get('/commands', async (req, res) => {
-//     const actualPage = '/commands'
-//     app.render(req, res, actualPage)
-//   })
-
-//   graphQLServer.get('*', (req, res) => {
-//     return handle(req, res)
-//   })
-// })
-// .catch((ex) => {
-//   /* eslint-disable no-console */
-//   console.error(ex.stack)
-//   /* eslint-enable no-console */
-//   process.exit(1)
-// })
