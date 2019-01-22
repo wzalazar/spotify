@@ -38,7 +38,8 @@
     "redux-combine-actions": "0.1.2",
     "redux-observable": "0.14.1",
     "rxjs": "5.4.0",
-    "spotify-web-api-node": "2.4.0"
+    "spotify-web-api-node": "2.4.0",
+    "webpack": "4.29.0"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
