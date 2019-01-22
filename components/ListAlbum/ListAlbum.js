@@ -33,7 +33,7 @@ export default class ListAlbum extends Component {
         { items.map((album, key) =>
           <Album key={key}
                   name={album.name}
-                  image={get(album, 'image[1].url', '')}
+                  image={get(album, 'images[1].url', '')}
                   onClick={onClick.bind(this, album)} />
         )}
       </div>
