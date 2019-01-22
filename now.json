@@ -1,9 +1,6 @@
 {
-  "version": 1,
-  "type": "docker",
-  "features": {
-    "cloud": "v1"
-  },
+  "version": 2,
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "name": "spotify-demo",
   "alias": "spotify-demo"
 }
