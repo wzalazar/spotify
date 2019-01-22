@@ -10,7 +10,7 @@ const handle = app.getRequestHandler()
 const main = async () => {
   try {
     await app.prepare()
-    const { app: graphQLServer } = await Graphite({ models: [Artist, Image, Album, Track] })
+    const { app: graphQLServer } = await Graphite({ models: [Artist, Image, Album, Track], port: 3000 })
 
     graphQLServer.get('/', async (req, res) => {
       const actualPage = '/index'
