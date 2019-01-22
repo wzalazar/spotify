@@ -61,7 +61,7 @@ class ResultsContainer extends Component {
   onClickAlbum(album) {
     const { store } = this.context;
     store.dispatch(onShowResultsTracks(album));
-    store.dispatch(onSearchTracksByAlbum({ query: getTrack, album: album._id }));
+    store.dispatch(onSearchTracksByAlbum({ query: getTrack, album: album.id }));
     window.scrollTo(0, 0);
   }
 
@@ -74,10 +74,10 @@ class ResultsContainer extends Component {
     const { search, results } = this.props;
     const { view, currentSelectedArtist, currentSelectedAlbum } = results;
     const artists = get(search, 'artists', []);
-    const albums = get(currentSelectedArtist, 'album', []);
+    const albums = get(currentSelectedArtist, 'albums', []);
     const tracks = get(search, 'tracks', []);
     const name = get(currentSelectedAlbum, 'name', '');
-    const image = get(currentSelectedAlbum, 'image[0].url', '');
+    const image = get(currentSelectedAlbum, 'images[0].url', '');
 
     const currentView = {
       'RESULTS_NOTHING': null,

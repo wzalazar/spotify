@@ -1,41 +1,69 @@
-const next = require('next');
+import next from 'next'
+import { Graphite } from '@graphite/server'
 
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
+import { Artist, Image, Album, Track } from './server/models'
 
-import Artists from './server/models/Artists';
-import Images from './server/models/Images';
-import Albums from './server/models/Albums';
-import Tracks from './server/models/Tracks';
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
+const handle = app.getRequestHandler()
 
-import { Graphite } from '@graphite/apollo-express';
-const graphQLServer = Graphite.graphQLServer({ graphql: { PORT: 3000 }}, [ Artists, Albums, Tracks, Images ]);
+const main = async () => {
+  try {
+    await app.prepare()
+    const { app: graphQLServer } = await Graphite({ models: [Artist, Image, Album, Track] })
 
-app.prepare()
-.then(() => {
-  graphQLServer.get('/', async (req, res) => {
-    const actualPage = '/index';
-    app.render(req, res, actualPage);
-  });
+    graphQLServer.get('/', async (req, res) => {
+      const actualPage = '/index'
+      app.render(req, res, actualPage)
+    })
 
-  graphQLServer.get('/about', async (req, res) => {
-    const actualPage = '/about';
-    app.render(req, res, actualPage);
-  });
+    graphQLServer.get('/about', async (req, res) => {
+      const actualPage = '/about'
+      app.render(req, res, actualPage)
+    })
 
-  graphQLServer.get('/commands', async (req, res) => {
-    const actualPage = '/commands';
-    app.render(req, res, actualPage);
-  });
+    graphQLServer.get('/commands', async (req, res) => {
+      const actualPage = '/commands'
+      app.render(req, res, actualPage)
+    })
 
-  graphQLServer.get('*', (req, res) => {
-    return handle(req, res);
-  });
-})
-.catch((ex) => {
-  /* eslint-disable no-console */
-  console.error(ex.stack);
-  /* eslint-enable no-console */
-  process.exit(1);
-});
+    graphQLServer.get('*', (req, res) => {
+      return handle(req, res)
+    })
+  } catch(e) {
+    /* eslint-disable no-console */
+    console.error(e.stack)
+    /* eslint-enable no-console */
+    process.exit(1)
+  }
+}
+
+main()
+
+// app.prepare()
+// .then(() => {
+//   graphQLServer.get('/', async (req, res) => {
+//     const actualPage = '/index'
+//     app.render(req, res, actualPage)
+//   })
+
+//   graphQLServer.get('/about', async (req, res) => {
+//     const actualPage = '/about'
+//     app.render(req, res, actualPage)
+//   })
+
+//   graphQLServer.get('/commands', async (req, res) => {
+//     const actualPage = '/commands'
+//     app.render(req, res, actualPage)
+//   })
+
+//   graphQLServer.get('*', (req, res) => {
+//     return handle(req, res)
+//   })
+// })
+// .catch((ex) => {
+//   /* eslint-disable no-console */
+//   console.error(ex.stack)
+//   /* eslint-enable no-console */
+//   process.exit(1)
+// })

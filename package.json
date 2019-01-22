@@ -19,8 +19,7 @@
     "test"
   ],
   "dependencies": {
-    "@graphite/apollo-express": "0.3.1",
-    "@graphite/decorators": "0.3.1",
+    "@graphite/server": "0.7.0",
     "annyang": "2.6.0",
     "dataloader": "1.3.0",
     "es6-promise": "4.1.0",

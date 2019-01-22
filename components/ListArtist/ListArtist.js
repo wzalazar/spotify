@@ -33,7 +33,7 @@ export default class ListArtist extends Component {
         { items.map((artist, key) =>
           <Artist key={key}
                   name={artist.name}
-                  image={get(artist, 'image[1].url', '')}
+                  image={get(artist, 'images[1].url', '')}
                   onClick={onClick.bind(this, artist)} />
         )}
       </div>
