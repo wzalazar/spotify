@@ -1,0 +1,18 @@
+{
+    "extension": [
+        ".js"
+    ],
+    "include": [
+      "components/**/*.js",
+      "containers/**/*.js"
+    ],
+    "reporter": [
+        "html",
+        "text",
+        "text-summary",
+        "lcovonly"
+    ],
+    "all": true,
+    "cache": false,
+    "esModules": true
+}

@@ -3,6 +3,7 @@ const withImages = require('next-images')
 const withFonts = require('next-fonts')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
+const withSourceMaps = require('@zeit/next-source-maps')
 
 module.exports = withPlugins([
   [
@@ -31,5 +32,6 @@ module.exports = withPlugins([
       inlineImageLimit: 0
     }
   ],
-  withFonts
+  withFonts,
+  withSourceMaps,
 ])
