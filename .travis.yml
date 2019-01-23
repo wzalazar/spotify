@@ -1,7 +1,11 @@
 language: node_js
 sudo: required
-script:
-  - npm run build
-after_success:
-  - '[[ $TRAVIS_BRANCH = "master" && $TRAVIS_PULL_REQUEST_BRANCH = "" ]] &&
-    (npm run travis-deploy-once "npm run semantic-release")'
+
+jobs:
+  include:
+    - stage: release
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - '[[ $TRAVIS_BRANCH = "master" && $TRAVIS_PULL_REQUEST_BRANCH = "" ]] && npm run semantic-release
