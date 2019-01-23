@@ -1,13 +1,15 @@
 FROM node:10.14.1
 
+RUN apt-get update && apt-get install yarn -y
+
 WORKDIR /usr/src
 
-COPY package-lock.json package.json
+COPY yarn.lock package.json
 COPY . .
 
-RUN npm install
-RUN npm run build
+RUN yarn
+RUN yarn build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
