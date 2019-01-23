@@ -4,9 +4,8 @@ sudo: required
 jobs:
   include:
     - stage: release
-      # script: skip
+      script: skip
       deploy:
-        if: branch = master
         provider: script
         skip_cleanup: true
         script:
