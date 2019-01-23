@@ -9,11 +9,12 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint -f table ./components ./config ./containers ./lib ./pages ./server || exit 1",
-    "start": "NODE_ENV=production node -r esm ./server.js",
-    "start:dev": "node -r esm ./server.js",
+    "start": "NODE_ENV=production node -r esm ./index.js",
+    "start:dev": "node -r esm ./index.js",
     "build": "next build",
     "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "test:functional": "NODE_ENV=production testcafe ${RUNNER:-chrome:headless} tests/functional/features"
   },
   "pre-push": [
     "lint",
@@ -86,7 +87,8 @@
     "sass-loader": "6.0.3",
     "semantic-release": "15.13.3",
     "sinon": "2.3.2",
-    "styled-jsx-plugin-sass": "1.0.0"
+    "styled-jsx-plugin-sass": "1.0.0",
+    "testcafe": "0.23.3"
   },
   "jest": {
     "coverageDirectory": ".coverage",

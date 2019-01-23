@@ -3,14 +3,15 @@ import { Graphite } from '@graphite/server'
 
 import { Artist, Image, Album, Track } from './server/models'
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+export const server = async () => {
+  const dev = process.env.NODE_ENV !== 'production'
+  const app = next({ dev })
+  const handle = app.getRequestHandler()
 
-const main = async () => {
   try {
     await app.prepare()
-    const { app: graphQLServer } = await Graphite({ models: [Artist, Image, Album, Track], port: 3000 })
+    const graphite = await Graphite({ models: [Artist, Image, Album, Track], port: 3000 })
+    const { app: graphQLServer } = graphite
 
     graphQLServer.get('/', async (req, res) => {
       const actualPage = '/index'
@@ -30,6 +31,11 @@ const main = async () => {
     graphQLServer.get('*', (req, res) => {
       return handle(req, res)
     })
+
+    return {
+      stop: graphite.stop
+    }
+
   } catch(e) {
     /* eslint-disable no-console */
     console.error(e.stack)
@@ -37,5 +43,3 @@ const main = async () => {
     process.exit(1)
   }
 }
-
-main()
