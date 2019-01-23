@@ -12,7 +12,9 @@
     "start": "NODE_ENV=production node -r esm ./server.js",
     "start:dev": "node -r esm ./server.js",
     "build": "next build",
-    "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png"
+    "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "pre-push": [
     "lint",
@@ -52,6 +54,8 @@
     "@babel/plugin-transform-async-to-generator": "7.2.0",
     "@babel/register": "7.0.0",
     "@babel/runtime": "7.1.2",
+    "@semantic-release/git": "7.0.8",
+    "@semantic-release/github": "5.2.9",
     "@zeit/next-css": "1.0.1",
     "@zeit/next-sass": "1.0.1",
     "autoprefixer": "6.7.7",
@@ -81,6 +85,7 @@
     "redux-test-utils": "0.1.2",
     "regenerator-runtime": "0.10.5",
     "sass-loader": "6.0.3",
+    "semantic-release": "15.13.3",
     "sinon": "2.3.2",
     "styled-jsx-plugin-sass": "1.0.0"
   },
