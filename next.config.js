@@ -14,15 +14,24 @@ const withCSS = require('@zeit/next-css')
 const nextConfig = {}
 
 module.exports = (phase, {defaultConfig}) => {
-  if (phase === PHASE_PRODUCTION_SERVER) {
-    // Config used to run in production.
-    return {}
-  }
-
   return withPlugins([
     withFonts,
-    withSass,
-    withCSS,
-    withImages
+    [
+      withSass,
+      {
+        cssModules: true,
+        cssLoaderOptions: {
+          importLoaders: 1,
+          localIdentName: '[local]'
+        }
+      }
+    ],
+
+    [
+      withImages,
+      {
+        inlineImageLimit: 0
+      }
+    ],
   ], nextConfig)(phase, { defaultConfig })
 }
