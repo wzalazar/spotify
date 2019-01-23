@@ -1,8 +1,10 @@
 language: node_js
-sudo: required
 
 before_install:
     - stty cols 80
+
+dist: trusty
+sudo: required
 
 addons:
   firefox: latest
