@@ -13,8 +13,7 @@
     "start:dev": "node -r esm ./server.js",
     "build": "next build",
     "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "pre-push": [
     "lint",
