@@ -1,5 +1,5 @@
 import { get, noop } from 'lodash'
-import Artist from '../Artist/Artist'
+import { Artist } from '../Artist/Artist'
 import { H2 } from '../H2/H2'
 
 export const ListArtist = ({ items = [], onClick = noop }) => (
