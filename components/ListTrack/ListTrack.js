@@ -1,4 +1,4 @@
-import { useState } from 'next'
+import { useState } from 'react'
 import { noop } from 'lodash'
 
 import { Album } from '../Album/Album'
