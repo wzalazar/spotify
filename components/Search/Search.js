@@ -1,6 +1,6 @@
 import { noop } from 'lodash'
 
-import Input from '../Input/Input'
+import { Input } from '../Input/Input'
 
 export const Search = ({ placeholder, value, onChange = noop }) => (
   <div className={'Search'}>
