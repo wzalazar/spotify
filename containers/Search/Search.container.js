@@ -9,9 +9,6 @@ import { Search } from '../../components/Search/Search'
 // import ProgressBar from '../../components/ProgressBar/ProgressBar'
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 
-const obj = { 'foo': { 'baz': 1, 'bar': 2 }}
-console.log('obj ', obj)
-
 @connect(({ search, results }) => ({
   search,
   results,
