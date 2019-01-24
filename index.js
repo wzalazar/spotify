@@ -1,5 +1,5 @@
 import { server } from './server'
 
 server()
-  .then(server => process.on('SIGINT', () => server.stop()))
+  .then(() => process.on('SIGINT', () => process.exit(0))
   .catch(e => console.log(e))

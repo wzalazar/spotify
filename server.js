@@ -32,8 +32,13 @@ export const server = async () => {
       return handle(req, res)
     })
 
+    const stop = () => {
+      graphite.stop
+      if (dev) app.hotReloader.webpackDevMiddleware.close
+    }
+
     return {
-      stop: graphite.stop
+      stop,
     }
 
   } catch(e) {
