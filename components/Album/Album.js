@@ -43,7 +43,7 @@ export default class Album extends Component {
               </path>
             </svg>
           </div>
-          <div className={'Album__image ' + (isImageLoaded ? 'loaded' : '')} style={{backgroundImage: `url(${this.loadImage(image)})`}} />
+          <div className={'Album__image ' + (isImageLoaded ? 'loaded' : '')} style={{ backgroundImage: `url(${this.loadImage(image)})` }} />
         </div>
         <div className={'Album__info'}>
           <p className={'Album__info__name'}>{name}</p>

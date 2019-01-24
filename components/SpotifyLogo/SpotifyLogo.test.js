@@ -1,6 +1,6 @@
 import { mount } from 'enzyme'
 
-import SpotifyLogo from './SpotifyLogo'
+import { SpotifyLogo } from './SpotifyLogo'
 
 describe('<SpotifyLogo />', () => {
   let wrapper
