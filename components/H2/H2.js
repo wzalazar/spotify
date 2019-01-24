@@ -1,8 +1,7 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export default class H2 extends Component {
-
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.any,
@@ -13,13 +12,13 @@ export default class H2 extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   render() {
-    const { children, className } = this.props;
+    const { children, className } = this.props
     return (
       <h2 className={'H2 spotify-bold ' + className}>{children}</h2>
-    );
+    )
   }
 }

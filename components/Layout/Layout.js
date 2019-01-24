@@ -1,10 +1,9 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import NavigationBar from '../NavigationBar/NavigationBar';
-import Line from '../Line/Line';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
+import NavigationBar from '../NavigationBar/NavigationBar'
+import Line from '../Line/Line'
 
 export default class Layout extends Component {
-
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.oneOfType([
@@ -18,11 +17,11 @@ export default class Layout extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   render() {
-    const { children, className } = this.props;
+    const { children, className } = this.props
     return (
       <div className={'Layout ' + className}>
         <div className={'Layout__cover ' + className} />
@@ -30,6 +29,6 @@ export default class Layout extends Component {
         {children}
         <Line />
       </div>
-    );
+    )
   }
 }

@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import ListAlbum from './ListAlbum';
+import ListAlbum from './ListAlbum'
 
 describe('<ListAlbum />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<ListAlbum />);
-  });
+    wrapper = mount(<ListAlbum />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

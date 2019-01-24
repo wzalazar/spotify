@@ -1,15 +1,15 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { get } from 'lodash';
-import withData from '../lib/withData';
-import H1 from '../components/H1/H1';
-import Text from '../components/Text/Text';
-import Main from '../components/Main/Main';
-import Layout from '../containers/Layout/Layout.container';
-import { onSetConfig } from '../config/config.actions';
-import load from 'load-script';
-import initReactFastclick from 'react-fastclick';
-initReactFastclick();
+import { Component } from 'react'
+import PropTypes from 'prop-types'
+import { get } from 'lodash'
+import withData from '../lib/withData'
+import H1 from '../components/H1/H1'
+import Text from '../components/Text/Text'
+import Main from '../components/Main/Main'
+import Layout from '../containers/Layout/Layout.container'
+import { onSetConfig } from '../config/config.actions'
+import load from 'load-script'
+import initReactFastclick from 'react-fastclick'
+initReactFastclick()
 
 
 class Commands extends Component {
@@ -28,22 +28,22 @@ class Commands extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   componentDidMount() {
-    const { store } = this.context;
-    const { config } = this.props;
-    const state = store.getState();
-    const isSetConfig = get(state, 'config.isSetConfig', true);
+    const { store } = this.context
+    const { config } = this.props
+    const state = store.getState()
+    const isSetConfig = get(state, 'config.isSetConfig', true)
     if (!isSetConfig) {
-      store.dispatch(onSetConfig(config));
+      store.dispatch(onSetConfig(config))
     }
-    load('https://buttons.github.io/buttons.js');
+    load('https://buttons.github.io/buttons.js')
   }
 
   static async getInitialProps({ config }) {
-    return config;
+    return config
   }
 
   render() {
@@ -63,8 +63,8 @@ class Commands extends Component {
           </div>
         </Main>
       </Layout>
-    );
+    )
   }
 }
 
-export default withData(Commands);
+export default withData(Commands)

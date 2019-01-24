@@ -1,8 +1,7 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export default class Text extends Component {
-
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.any,
@@ -13,13 +12,13 @@ export default class Text extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   render() {
-    const { children, className } = this.props;
+    const { children, className } = this.props
     return (
       <p className={'Text spotify-light ' + className}>{children}</p>
-    );
+    )
   }
 }

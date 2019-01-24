@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import ProgressBar from './ProgressBar';
+import ProgressBar from './ProgressBar'
 
 describe('<ProgressBar />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<ProgressBar />);
-  });
+    wrapper = mount(<ProgressBar />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

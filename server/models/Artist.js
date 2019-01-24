@@ -1,19 +1,19 @@
 import { GraphQL } from '@graphite/server'
 import { get } from 'lodash'
 
-import { loaderSearchArtist, loaderAlbumsByArtist } from '../loaders';
+import { loaderSearchArtist, loaderAlbumsByArtist } from '../loaders'
 
 export const Artist = GraphQL('Artist')({
- id: ['ID'],
- name: ['String'],
- genres: ['[String]'],
- popularity: ['String'],
- type: ['String'],
- followers: ['String'],
+  id: ['ID'],
+  name: ['String'],
+  genres: ['[String]'],
+  popularity: ['String'],
+  type: ['String'],
+  followers: ['String'],
 
- 'images: [Image]': (artist = {}) => get(artist, 'images', null),
+  'images: [Image]': (artist = {}) => get(artist, 'images', null),
 
- 'albums: [Album]': async({ id }) => {
+  'albums: [Album]': async({ id }) => {
     const { items = [] } = await loaderAlbumsByArtist.load(id)
     return items
   },
@@ -23,7 +23,7 @@ export const Artist = GraphQL('Artist')({
       const data = await loaderSearchArtist.load(artist)
       const items = get(data, 'artists.items', [])
       return items.map(item => mapArtist(item))
-    }
+    },
   },
 })
 

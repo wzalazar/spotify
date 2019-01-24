@@ -1,22 +1,22 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import Layout from './Layout';
-import Router from 'next/router';
+import Layout from './Layout'
+import Router from 'next/router'
 const mockedRouter = {
   push: () => {},
   prefetch: () => {},
   pathname: '/',
-};
-Router.router = mockedRouter;
+}
+Router.router = mockedRouter
 
 describe('<Layout />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<Layout />);
-  });
+    wrapper = mount(<Layout />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})
