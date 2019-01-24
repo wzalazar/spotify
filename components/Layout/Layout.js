@@ -1,4 +1,4 @@
-import NavigationBar from '../NavigationBar/NavigationBar'
+import { NavigationBar } from '../NavigationBar/NavigationBar'
 import { Line } from '../Line/Line'
 
 export const Layout = ({ children, className }) => (
