@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Router from 'next/router'
-import {SpotifyLogo} from '../SpotifyLogo/SpotifyLogo'
+import { SpotifyLogo } from '../SpotifyLogo/SpotifyLogo'
 import Hamburger from '../Hamburger/Hamburger'
 import Link from 'next/link'
 

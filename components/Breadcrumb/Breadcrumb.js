@@ -5,7 +5,7 @@ const onClick = (e, item) => {
   item.onClick()
 }
 
-export const Breadcrumb = ({ items = []}) => (
+export const Breadcrumb = ({ items = [] }) => (
   <nav className={'Breadcrumb'}>
     <ul className={'Breadcrumb__list'}>
       { items.map((item, key) =>

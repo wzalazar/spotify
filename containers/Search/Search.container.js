@@ -1,14 +1,16 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { onSearch, onSearchCancelled, onSearchClear } from './Search.actions'
 import { onShowResultsArtists, onShowResultsAlbums } from '../Results/Results.actions'
 import { getArtist } from '../../graphql/artist'
 import { get, isEmpty, debounce, noop } from 'lodash'
-import {Search} from '../../components/Search/Search'
+import { Search } from '../../components/Search/Search'
 // import ProgressBar from '../../components/ProgressBar/ProgressBar'
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 
+const obj = { 'foo': { 'baz': 1, 'bar': 2 }}
+console.log('obj ', obj)
 
 @connect(({ search, results }) => ({
   search,

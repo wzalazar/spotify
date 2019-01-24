@@ -42,7 +42,7 @@ export default class Artist extends Component {
               </path>
             </svg>
           </div>
-          <div className={'Artist__image ' + (isImageLoaded ? 'loaded' : '')} style={{backgroundImage: `url(${this.loadImage(image)})`}} />
+          <div className={'Artist__image ' + (isImageLoaded ? 'loaded' : '')} style={{ backgroundImage: `url(${this.loadImage(image)})` }} />
         </div>
         <div className={'Artist__info'}>
           <p className={'Artist__info__name'}>{name}</p>

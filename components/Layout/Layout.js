@@ -1,5 +1,5 @@
 import NavigationBar from '../NavigationBar/NavigationBar'
-import {Line} from '../Line/Line'
+import { Line } from '../Line/Line'
 
 export const Layout = ({ children, className }) => (
   <div className={'Layout ' + className}>
