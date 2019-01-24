@@ -5,9 +5,9 @@ import { onSearch, onSearchCancelled, onSearchClear } from './Search.actions'
 import { onShowResultsArtists, onShowResultsAlbums } from '../Results/Results.actions'
 import { getArtist } from '../../graphql/artist'
 import { get, isEmpty, debounce, noop } from 'lodash'
-import Search from '../../components/Search/Search'
+import {Search} from '../../components/Search/Search'
 // import ProgressBar from '../../components/ProgressBar/ProgressBar'
-import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 
 
 @connect(({ search, results }) => ({

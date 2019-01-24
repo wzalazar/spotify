@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect} from 'react-redux'
-import Layout from '../../components/Layout/Layout'
+import {Layout} from '../../components/Layout/Layout'
 
 @connect(({ results }) => ({
   results,
