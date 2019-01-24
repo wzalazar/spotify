@@ -832,16 +832,16 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@graphite/server@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@graphite/server/-/server-0.8.0.tgz#d4665a6fe3d22e783d97bf773dc76802322f7412"
-  integrity sha512-n9t9kLFpOXGGs9k/Iwc1fBSv4aEC+H86HJ2J6SPehGmzoahMKHEe3u95V+WeqdJa0hfTz3I8q3Cc/QLSB64wxA==
+"@graphite/server@0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@graphite/server/-/server-0.8.3.tgz#7a318d5f3ad36f9456a84f37d7caebe0abed3179"
+  integrity sha512-JijKsEexSu1TS4HoB4mScCayuM95v2cs+77vQJH1xlldxKhkRTtyPQCNQarbWoDMLEr3yr/NScnhZ72JQuCy3A==
   dependencies:
     apollo-server "2.3.1"
     apollo-server-express "2.3.1"
     express "4.16.4"
     graphql "14.1.1"
-    pino "5.10.8"
+    pino "5.11.0"
     pino-pretty "2.5.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
@@ -9527,10 +9527,10 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.3.0.tgz#34eeaab97c055c28e22c0542ae55978e7e427786"
   integrity sha512-klfGoOsP6sJH7ON796G4xoUSx2fkpFgKHO4YVVO2zmz31jR+etzc/QzGJILaOIiCD6HTCFgkPx+XN8nk+ruqPw==
 
-pino@5.10.8:
-  version "5.10.8"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.10.8.tgz#c13b807a0942760afbfd3e622bcf8515582a83d1"
-  integrity sha512-BoFM5nv1TrAxaJdM2J5LwHwRNsggn6BADMHOg9ktwkSZtfhWEhlOcACtq1ylzJ8b5kcB/VQfjjDpTCa6sB14Kw==
+pino@5.11.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.11.0.tgz#9d0dc32a46afb6fcc9e81924be0695fa61157c02"
+  integrity sha512-I5aOohtRrPjoBGmNRt7kQECeCp+4IcmVL7GDkTMiDfSar24YjFyit123OfB6k8SlNDM3+1EFfaCpMNsZTpH+pw==
   dependencies:
     fast-redact "^1.4.2"
     fast-safe-stringify "^2.0.6"
