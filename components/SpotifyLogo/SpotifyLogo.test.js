@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import SpotifyLogo from './SpotifyLogo';
+import SpotifyLogo from './SpotifyLogo'
 
 describe('<SpotifyLogo />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<SpotifyLogo />);
-  });
+    wrapper = mount(<SpotifyLogo />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

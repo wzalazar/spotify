@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { noop } from 'lodash';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
+import { noop } from 'lodash'
 
 export default class Input extends Component {
   static propTypes = {
@@ -21,27 +21,27 @@ export default class Input extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   onChange(event) {
-    const value = event.target.value;
-    const { onChange } = this.props;
-    onChange(value);
+    const value = event.target.value
+    const { onChange } = this.props
+    onChange(value)
   }
 
   render() {
-    const { name, placeholder, value, type, className } = this.props;
+    const { name, placeholder, value, type, className } = this.props
 
     return (
-       <div className={'Input'}>
-         <input className={className}
-                onChange={this.onChange.bind(this)}
-                name={name}
-                value={value}
-                placeholder={placeholder}
-                type={type} />
-       </div>
-    );
+      <div className={'Input'}>
+        <input className={className}
+          onChange={this.onChange.bind(this)}
+          name={name}
+          value={value}
+          placeholder={placeholder}
+          type={type} />
+      </div>
+    )
   }
 }

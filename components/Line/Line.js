@@ -1,13 +1,13 @@
-import { Component } from 'react';
+import { Component } from 'react'
 
 export default class Line extends Component {
   constructor() {
-    super();
+    super()
   }
 
   render() {
     return (
       <div className={'Line'} />
-    );
+    )
   }
 }

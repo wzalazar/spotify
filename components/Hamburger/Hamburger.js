@@ -1,9 +1,8 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { noop } from 'lodash';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
+import { noop } from 'lodash'
 
 export default class Hamburguer extends Component {
-
   static propTypes = {
     onClick: PropTypes.func,
   }
@@ -13,21 +12,21 @@ export default class Hamburguer extends Component {
   }
 
   constructor() {
-    super();
+    super()
     this.state = {
       isCollapse: true,
-    };
+    }
   }
 
   onClick() {
-    const { onClick } = this.props;
-    const { isCollapse } = this.state;
-    this.setState({ isCollapse: !isCollapse });
-    onClick(!isCollapse);
+    const { onClick } = this.props
+    const { isCollapse } = this.state
+    this.setState({ isCollapse: !isCollapse })
+    onClick(!isCollapse)
   }
 
   render() {
-    const { isCollapse } = this.state;
+    const { isCollapse } = this.state
 
     return (
       <button className={'Hamburger hamburger hamburger--collapse js-hamburger ' + ( isCollapse ? '' : 'is-active' ) } type="button" onClick={this.onClick.bind(this)}>
@@ -35,6 +34,6 @@ export default class Hamburguer extends Component {
           <span className="hamburger-inner"/>
         </span>
       </button>
-    );
+    )
   }
 }

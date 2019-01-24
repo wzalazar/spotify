@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import Input from './Input';
+import Input from './Input'
 
 describe('<Input />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<Input />);
-  });
+    wrapper = mount(<Input />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

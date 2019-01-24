@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import ListTrack from './ListTrack';
+import ListTrack from './ListTrack'
 
 describe('<ListTrack />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<ListTrack />);
-  });
+    wrapper = mount(<ListTrack />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

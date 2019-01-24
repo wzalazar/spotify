@@ -1,22 +1,22 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import NavigationBar from './NavigationBar';
-import Router from 'next/router';
+import NavigationBar from './NavigationBar'
+import Router from 'next/router'
 const mockedRouter = {
   push: () => {},
   prefetch: () => {},
   pathname: '/',
-};
-Router.router = mockedRouter;
+}
+Router.router = mockedRouter
 
 describe('<NavigationBar />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<NavigationBar />);
-  });
+    wrapper = mount(<NavigationBar />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

@@ -1,8 +1,7 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export default class Main extends Component {
-
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.element),
@@ -13,15 +12,15 @@ export default class Main extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   render() {
-    const { children } = this.props;
+    const { children } = this.props
     return (
       <div className={'Main'}>
         {children}
       </div>
-    );
+    )
   }
 }

@@ -1,14 +1,14 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { get } from 'lodash';
-import withData from '../lib/withData';
-import Main from '../containers/Main/Main.container';
-import Layout from '../containers/Layout/Layout.container';
-import { onSetConfig } from '../config/config.actions';
-import load from 'load-script';
-import initReactFastclick from 'react-fastclick';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
+import { get } from 'lodash'
+import withData from '../lib/withData'
+import Main from '../containers/Main/Main.container'
+import Layout from '../containers/Layout/Layout.container'
+import { onSetConfig } from '../config/config.actions'
+import load from 'load-script'
+import initReactFastclick from 'react-fastclick'
 import '../styles/main.scss'
-initReactFastclick();
+initReactFastclick()
 
 
 class Index extends Component {
@@ -27,23 +27,23 @@ class Index extends Component {
   }
 
   constructor() {
-    super();
+    super()
   }
 
   componentDidMount() {
-    const { store } = this.context;
-    const { config } = this.props;
-    const state = store.getState();
-    const isSetConfig = get(state, 'config.isSetConfig', true);
+    const { store } = this.context
+    const { config } = this.props
+    const state = store.getState()
+    const isSetConfig = get(state, 'config.isSetConfig', true)
     if (!isSetConfig) {
-      store.dispatch(onSetConfig(config));
+      store.dispatch(onSetConfig(config))
     }
 
-    load('https://buttons.github.io/buttons.js');
+    load('https://buttons.github.io/buttons.js')
   }
 
   static async getInitialProps({ config }) {
-    return config;
+    return config
   }
 
   render() {
@@ -51,8 +51,8 @@ class Index extends Component {
       <Layout>
         <Main />
       </Layout>
-    );
+    )
   }
 }
 
-export default withData(Index);
+export default withData(Index)

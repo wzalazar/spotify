@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import Artist from './Artist';
+import Artist from './Artist'
 
 describe('<Artist />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<Artist />);
-  });
+    wrapper = mount(<Artist />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

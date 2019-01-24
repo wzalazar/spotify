@@ -1,15 +1,15 @@
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
-import H2 from './H2';
+import H2 from './H2'
 
 describe('<H2 />', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = mount(<H2 />);
-  });
+    wrapper = mount(<H2 />)
+  })
 
   test('Should renderer', () => {
-    expect(wrapper).toBeDefined();
-  });
-});
+    expect(wrapper).toBeDefined()
+  })
+})

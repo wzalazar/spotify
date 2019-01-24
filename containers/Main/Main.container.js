@@ -1,15 +1,15 @@
-import { Component } from 'react';
-import { connect} from 'react-redux';
-import Main from '../../components/Main/Main';
-import Search from '../Search/Search.container';
-import Results from '../Results/Results.container';
+import { Component } from 'react'
+import { connect} from 'react-redux'
+import Main from '../../components/Main/Main'
+import Search from '../Search/Search.container'
+import Results from '../Results/Results.container'
 
 @connect(({ results }) => ({
   results,
 }))
 class MainContainer extends Component {
   constructor() {
-    super();
+    super()
   }
 
   render() {
@@ -18,8 +18,8 @@ class MainContainer extends Component {
         <Search />
         <Results />
       </Main>
-    );
+    )
   }
 }
 
-export default MainContainer;
+export default MainContainer
