@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import Router from 'next/router'
 import { SpotifyLogo } from '../SpotifyLogo/SpotifyLogo'
-import Hamburger from '../Hamburger/Hamburger'
+import { Hamburguer } from '../Hamburger/Hamburger'
 import Link from 'next/link'
 
 
@@ -31,7 +31,7 @@ export default class NavigationBar extends Component {
       <div className={'NavigationBar ' + (isCollapse ? 'collapse' : '')}>
         <nav className={'NavigationBar__nav'}>
           <SpotifyLogo />
-          <Hamburger onClick={this.onClickHamburguer.bind(this)} />
+          <Hamburguer onClick={this.onClickHamburguer.bind(this)} />
           <ul className={'NavigationBar__nav__list'}>
             <div className={'NavigationBar__nav__list__group'}>
               <li className={'NavigationBar__nav__list__group__item'}>
