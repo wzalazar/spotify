@@ -11194,10 +11194,10 @@ signale@^1.2.1:
     figures "^2.0.0"
     pkg-conf "^2.1.0"
 
-sinon@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.2.tgz#c43a9c570f32baac1159505cfeed19108855df89"
-  integrity sha1-xDqcVw8yuqwRWVBc/u0ZEIhV34k=
+sinon@2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
+  integrity sha1-Md4G/tj7o6Zx5XbdltClhjeW8lw=
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
