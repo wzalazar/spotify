@@ -81,7 +81,7 @@
     "postcss-loader": "1.3.3",
     "raw-loader": "0.5.1",
     "react-addons": "0.9.1-deprecated",
-    "react-addons-test-utils": "15.5.1",
+    "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "15.5.4",
     "redux-logger": "3.0.6",
     "redux-mock-store": "1.2.3",
