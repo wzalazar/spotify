@@ -73,7 +73,7 @@
     "next-compose-plugins": "2.1.1",
     "next-fonts": "0.16.0",
     "next-images": "1.0.4",
-    "node-plantuml": "0.5.0",
+    "node-plantuml": "0.8.1",
     "node-sass": "4.5.3",
     "postcss": "7.0.7",
     "postcss-easy-import": "2.0.0",
