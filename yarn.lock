@@ -9609,10 +9609,10 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
-postcss-easy-import@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-easy-import/-/postcss-easy-import-2.0.0.tgz#a874d4de054b9242545bf553e438c1823c108512"
-  integrity sha1-qHTU3gVLkkJUW/VT5DjBgjwQhRI=
+postcss-easy-import@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-easy-import/-/postcss-easy-import-2.1.0.tgz#1d49f8a7c404415cfee4e5cb7a15fdf866c13022"
+  integrity sha512-LfHi1rFGZ//1idOauAzhK45vjruQJGuofmR0fjUx+2gToT9L1kYlOQN0Ke6rwvuEE/IY/CHK5XgbGfRhbx0Hbw==
   dependencies:
     globby "^6.1.0"
     is-glob "^3.1.0"
