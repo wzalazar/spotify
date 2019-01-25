@@ -10470,10 +10470,10 @@ redux-observable@0.14.1:
   resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
   integrity sha1-nz2HDGk4j9xCfe1ncKPjJvO2lpM=
 
-redux-test-utils@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.1.2.tgz#80c74d6ce0d2154e14f47b1e3f3a8dd6436a74e1"
-  integrity sha1-gMdNbODSFU4U9HsePzqN1kNqdOE=
+redux-test-utils@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.1.3.tgz#0d89100f100f86c7c7214976eaece88e7e45bf74"
+  integrity sha1-DYkQDxAPhsfHIUl26uzojn5Fv3Q=
 
 redux@3.6.0:
   version "3.6.0"
