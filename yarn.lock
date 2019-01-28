@@ -5618,11 +5618,6 @@ git-log-parser@^1.2.0:
     through2 "~2.0.0"
     traverse "~0.6.6"
 
-gitbook-plugin-github@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gitbook-plugin-github/-/gitbook-plugin-github-2.0.0.tgz#5166e763cfcc402d432880b7a6c85c1c54b56a8d"
-  integrity sha1-UWbnY8/MQC1DKIC3pshcHFS1ao0=
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -10444,12 +10439,10 @@ redux-mock-store@1.5.3:
   dependencies:
     lodash.isplainobject "^4.0.6"
 
-redux-observable@0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.19.0.tgz#6c1b8b58bc6ef7284c47aaad26963e02b1b425fb"
-  integrity sha512-OdYdKKQ+sgnoAE2SA3KW4Qolb5iVlTUch53qc61+WAiN2c3uPfBxFNGkxAl5fXpEAh75d1RlAfJNa+CPBkMZQA==
-  dependencies:
-    gitbook-plugin-github "^2.0.0"
+redux-observable@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-1.0.0.tgz#780ff2455493eedcef806616fe286b454fd15d91"
+  integrity sha512-6bXnpqWTBeLaLQjXHyN1giXq4nLxCmv+SUkdmiwBgvmVxvDbdmydvL1Z7DGo0WItyzI/kqXQKiucUuTxnrPRkA==
 
 redux-test-utils@0.3.0:
   version "0.3.0"
