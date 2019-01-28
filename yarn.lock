@@ -10423,10 +10423,12 @@ redux-observable@0.14.1:
   resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
   integrity sha1-nz2HDGk4j9xCfe1ncKPjJvO2lpM=
 
-redux-test-utils@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.1.2.tgz#80c74d6ce0d2154e14f47b1e3f3a8dd6436a74e1"
-  integrity sha1-gMdNbODSFU4U9HsePzqN1kNqdOE=
+redux-test-utils@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.3.0.tgz#0a788c1c7d73f8360af7d2559ffc7c3788fce173"
+  integrity sha512-Ee0SB+FjOJ1efnJZY/0MptkmgKodyZfMiHu/g7O5EfoYDOZvWGHF+WD2xBNuwE6sfEzBiHP/7MkJsASoV/Pq/A==
+  dependencies:
+    fast-deep-equal "^2.0.1"
 
 redux@3.6.0:
   version "3.6.0"
