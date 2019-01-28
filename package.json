@@ -22,9 +22,9 @@
     "test"
   ],
   "dependencies": {
-    "@graphite/server": "0.8.3",
+    "@graphite/server": "0.8.6",
     "annyang": "2.6.0",
-    "dataloader": "1.3.0",
+    "dataloader": "1.4.0",
     "es6-promise": "4.1.0",
     "esm": "3.1.4",
     "ip": "1.1.5",
@@ -87,7 +87,7 @@
     "redux-mock-store": "1.5.3",
     "redux-test-utils": "0.3.0",
     "regenerator-runtime": "0.13.1",
-    "sass-loader": "6.0.3",
+    "sass-loader": "7.1.0",
     "semantic-release": "15.13.3",
     "sinon": "2.4.1",
     "styled-jsx-plugin-sass": "1.0.0",
