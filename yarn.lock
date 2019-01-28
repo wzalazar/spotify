@@ -5618,6 +5618,11 @@ git-log-parser@^1.2.0:
     through2 "~2.0.0"
     traverse "~0.6.6"
 
+gitbook-plugin-github@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gitbook-plugin-github/-/gitbook-plugin-github-2.0.0.tgz#5166e763cfcc402d432880b7a6c85c1c54b56a8d"
+  integrity sha1-UWbnY8/MQC1DKIC3pshcHFS1ao0=
+
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -10439,10 +10444,12 @@ redux-mock-store@1.5.3:
   dependencies:
     lodash.isplainobject "^4.0.6"
 
-redux-observable@0.14.1:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
-  integrity sha1-nz2HDGk4j9xCfe1ncKPjJvO2lpM=
+redux-observable@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.19.0.tgz#6c1b8b58bc6ef7284c47aaad26963e02b1b425fb"
+  integrity sha512-OdYdKKQ+sgnoAE2SA3KW4Qolb5iVlTUch53qc61+WAiN2c3uPfBxFNGkxAl5fXpEAh75d1RlAfJNa+CPBkMZQA==
+  dependencies:
+    gitbook-plugin-github "^2.0.0"
 
 redux-test-utils@0.3.0:
   version "0.3.0"
@@ -11458,10 +11465,10 @@ split@^1.0.0:
   dependencies:
     through "2"
 
-spotify-web-api-node@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/spotify-web-api-node/-/spotify-web-api-node-2.4.0.tgz#948f5bcfe098e5027367361dd2b003c7e3ce4cd5"
-  integrity sha1-lI9bz+CY5QJzZzYd0rADx+POTNU=
+spotify-web-api-node@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/spotify-web-api-node/-/spotify-web-api-node-2.5.0.tgz#b4982deeb235ede38d9cff9389ab24ed45ff19c1"
+  integrity sha512-SoTYlIjFPE8zj/cH+eBDKfj7oKuM8tfxclGhN6tw8zGn4tNP2Ej1UutStdRFtMmYYBb7VccvD3gXJjabfcZhag==
   dependencies:
     superagent "^2.0.0"
 
