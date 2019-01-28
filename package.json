@@ -37,7 +37,7 @@
     "react-fastclick": "3.0.2",
     "react-progressbar.js": "0.2.0",
     "react-redux": "5.1.1",
-    "redux": "3.7.2",
+    "redux": "4.0.1",
     "redux-combine-actions": "0.1.2",
     "redux-observable": "1.0.0",
     "rxjs": "5.5.12",
