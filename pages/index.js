@@ -1,58 +1,24 @@
-import { Component } from 'react'
-import PropTypes from 'prop-types'
-import { get } from 'lodash'
-import withData from '../lib/withData'
-import Main from '../containers/Main/Main.container'
-import Layout from '../containers/Layout/Layout.container'
-import { onSetConfig } from '../config/config.actions'
+import { useEffect } from 'react'
 import load from 'load-script'
 import initReactFastclick from 'react-fastclick'
+
+import withData from '../lib/withData'
+import { MainContainer } from '../containers/Main/Main.container'
+import { LayoutContainer } from '../containers/Layout/Layout.container'
 import '../styles/main.scss'
+
 initReactFastclick()
 
-
-class Index extends Component {
-  static propTypes = {
-    items: PropTypes.array,
-    config: PropTypes.object,
-  }
-
-  static contextTypes = {
-    store: PropTypes.object,
-  }
-
-  static defaultProps = {
-    items: [],
-    config: {},
-  }
-
-  constructor() {
-    super()
-  }
-
-  componentDidMount() {
-    const { store } = this.context
-    const { config } = this.props
-    const state = store.getState()
-    const isSetConfig = get(state, 'config.isSetConfig', true)
-    if (!isSetConfig) {
-      store.dispatch(onSetConfig(config))
-    }
-
+const Index = () => {
+  useEffect(() => {
     load('https://buttons.github.io/buttons.js')
-  }
+  }, [])
 
-  static async getInitialProps({ config }) {
-    return config
-  }
-
-  render() {
-    return (
-      <Layout>
-        <Main />
-      </Layout>
-    )
-  }
+  return (
+    <LayoutContainer>
+      <MainContainer />
+    </LayoutContainer>
+  )
 }
 
 export default withData(Index)
