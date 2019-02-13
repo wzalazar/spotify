@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { noop } from 'lodash'
 
 import { Album } from '../Album/Album'
+import { H2 } from '../H2/H2'
 
 const convertTime = (ms) => {
   const minutes = Math.floor(ms / 60000)
@@ -23,7 +24,7 @@ export const ListTrack = ({ items, image, name, onClick = noop }) => {
       <div className={'ListTrack__album'}>
         <Album image={image}
           name={name}
-          onClick={this.onClick.bind(this, firstTrack)} />
+          onClick={trigger} />
       </div>
       <div className={'ListTrack__tracks'}>
         <H2 className={'hide_table'}>Tracks</H2>
