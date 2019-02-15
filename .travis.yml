@@ -25,6 +25,7 @@ jobs:
     - stage: Tests
       script:
         - npm run build
+        - npm run test:unit
         - npm run test:functional
     - stage: release
       script: skip

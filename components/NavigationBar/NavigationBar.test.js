@@ -1,7 +1,11 @@
-import { mount } from 'enzyme'
-
-import NavigationBar from './NavigationBar'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import Router from 'next/router'
+
+import { NavigationBar } from './NavigationBar'
+
+Enzyme.configure({ adapter: new Adapter() })
+
 const mockedRouter = {
   push: () => {},
   prefetch: () => {},

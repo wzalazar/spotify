@@ -1,6 +1,9 @@
-import { mount } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
-import Line from './Line'
+Enzyme.configure({ adapter: new Adapter() })
+
+import { Line } from './Line'
 
 describe('<Line />', () => {
   let wrapper

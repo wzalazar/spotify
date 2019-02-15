@@ -10,7 +10,7 @@ const convertTime = (ms) => {
   return `${minutes}:${(seconds < 10 ? '0' : '') + seconds}`
 }
 
-export const ListTrack = ({ items, image, name, onClick = noop }) => {
+export const ListTrack = ({ items = [], image, name, onClick = noop }) => {
   const [active, setActive] = useState('')
 
   const trigger = (track) => {

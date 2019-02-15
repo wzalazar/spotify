@@ -1,6 +1,9 @@
-import { mount } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
-import ListAlbum from './ListAlbum'
+Enzyme.configure({ adapter: new Adapter() })
+
+import { ListAlbum } from './ListAlbum'
 
 describe('<ListAlbum />', () => {
   let wrapper
