@@ -1,6 +1,9 @@
-import { mount } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
-import H2 from './H2'
+Enzyme.configure({ adapter: new Adapter() })
+
+import { H2 } from './H2'
 
 describe('<H2 />', () => {
   let wrapper
