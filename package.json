@@ -90,7 +90,7 @@
     "regenerator-runtime": "0.13.1",
     "sass-loader": "7.1.0",
     "semantic-release": "15.13.3",
-    "sinon": "7.2.3",
+    "sinon": "7.2.4",
     "styled-jsx-plugin-sass": "1.0.0",
     "testcafe": "0.23.3"
   },
