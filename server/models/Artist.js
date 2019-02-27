@@ -27,10 +27,10 @@ const Artist = GraphQL('Artist')({
   },
 })
 
-export const mapArtist = (artist = {}) => {
+const mapArtist = (artist = {}) => {
   const followers = get(artist, 'followers.total', '0')
   return { ...artist, followers }
 }
 
 
-module.exports = { Artist }
+module.exports = { Artist, mapArtist }
