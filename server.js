@@ -10,7 +10,7 @@ const { Artist, Image, Album, Track } = require('./server/models')
 /* eslint-disable consistent-return */
 const server = async() => {
   const dev = process.env.NODE_ENV !== 'production'
-  const app = next({ dev, dir: '/var/task/user/.next' })
+  const app = next({ dev })
   const handle = app.getRequestHandler()
 
   try {
