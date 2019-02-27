@@ -16,8 +16,7 @@
     "semantic-release": "semantic-release",
     "test:unit": "jest",
     "test:functional": "NODE_ENV=production testcafe ${RUNNER:-chrome:headless} tests/functional/features",
-    "coverage:unit": "jest --coverage",
-    "postinstall": "npm run build"
+    "coverage:unit": "jest --coverage"
   },
   "pre-push": [
     "lint",
