@@ -1,10 +1,14 @@
-import next from 'next'
-import { Graphite } from '@graphite/server'
+// import next from 'next'
+// import { Graphite } from '@graphite/server'
 
-import { Artist, Image, Album, Track } from './server/models'
+// import { Artist, Image, Album, Track } from './server/models'
+
+const next = require('next')
+const { Graphite } = require('@graphite/server')
+const { Artist, Image, Album, Track } = require('./server/models')
 
 /* eslint-disable consistent-return */
-export const server = async() => {
+const server = async() => {
   const dev = process.env.NODE_ENV !== 'production'
   const app = next({ dev })
   const handle = app.getRequestHandler()
@@ -46,3 +50,5 @@ export const server = async() => {
     process.exit(1)
   }
 }
+
+module.exports = { server }

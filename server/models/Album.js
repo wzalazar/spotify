@@ -1,10 +1,10 @@
-import { GraphQL } from '@graphite/server'
-import { get } from 'lodash'
+const { GraphQL } = require('@graphite/server')
+const { get } = require('lodash')
 
-import { loaderTracksByAlbum, loaderAlbum } from '../loaders'
-import spotify from '../api/spotify'
+const { loaderTracksByAlbum, loaderAlbum } = require('../loaders')
+const spotify = require('../api/spotify')
 
-export const Album = GraphQL('Album')({
+const Album = GraphQL('Album')({
   id: ['ID'],
   name: ['String'],
   type: ['String'],
@@ -32,3 +32,6 @@ export const Album = GraphQL('Album')({
     },
   },
 })
+
+
+module.exports = { Album }

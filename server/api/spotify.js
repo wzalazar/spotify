@@ -1,6 +1,9 @@
-import SpotifyWebApi from 'spotify-web-api-node'
+// import SpotifyWebApi from 'spotify-web-api-node'
+// import fetch from 'isomorphic-fetch'
+
+const SpotifyWebApi = require('spotify-web-api-node')
+const fetch = require('isomorphic-fetch')
 require('es6-promise').polyfill()
-import fetch from 'isomorphic-fetch'
 
 class Spotify {
   constructor(clientId, clientSecret, redirectUri) {
@@ -89,7 +92,7 @@ class Spotify {
   }
 }
 
-export default new Spotify(
+module.exports = new Spotify(
   '62c1377ce77e4c6f818760fb761a177a',
   '404a1014b29a48d0898517f9091c1d69',
   'http://localhost:3000'
