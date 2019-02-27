@@ -4,6 +4,9 @@
     { "src": "index.js", "use": "@now/node-server" },
     { "src": "package.json", "use": "@now/next" }
   ],
+  "routes": [
+    { "src": "/graphql", "dest": "index.js" }
+  ],
   "name": "spotify-demo",
   "alias": "spotify-demo"
 }
