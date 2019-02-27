@@ -5,6 +5,11 @@ const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
 
+
+const nextConfig = {
+  target: 'serverless',
+}
+
 module.exports = withPlugins([
   [
     withSass,
@@ -37,4 +42,4 @@ module.exports = withPlugins([
     {},
     [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
   ],
-])
+], nextConfig)

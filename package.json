@@ -9,6 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "now-build": "next build",
     "lint": "eslint -f table *.js || exit 1",
     "lint:fix": "eslint --fix *.js || exit 1",
     "start:dev": "node -r esm ./index.js",
