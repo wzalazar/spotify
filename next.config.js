@@ -4,13 +4,6 @@ const withFonts = require('next-fonts')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 
-const nextConfig = {
-  distDir: '/var/task/user/.next',
-  webpack: (config) => {
-    return config
-  },
-}
-
 module.exports = withPlugins([
   [
     withSass,
@@ -39,4 +32,4 @@ module.exports = withPlugins([
     },
   ],
   withFonts,
-], nextConfig)
+])
