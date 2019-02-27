@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "serverless.js", "use": "@now/node" }],
+  "builds": [{ "src": "serverless.js", "use": "@now/node-server" }],
   "name": "spotify-demo",
   "alias": "spotify-demo"
 }
