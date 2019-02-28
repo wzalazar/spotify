@@ -15,5 +15,6 @@
   },
   "devDependencies": {
     "automerge": true
-  }
+  },
+  "prHourlyLimit": 1
 }
