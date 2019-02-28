@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build:testing": " NODE_ENV=testing next build",
     "start": "next start",
     "now-build": "next build",
     "lint": "eslint -f table *.js || exit 1",
@@ -16,7 +17,7 @@
     "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png",
     "semantic-release": "semantic-release",
     "test:unit": "jest",
-    "test:functional": "NODE_ENV=production testcafe ${RUNNER:-chrome:headless} tests/functional/features",
+    "test:functional": "NODE_ENV=testing testcafe ${RUNNER:-chrome:headless} tests/functional/features --app 'npm run start'",
     "coverage:unit": "jest --coverage"
   },
   "pre-push": [

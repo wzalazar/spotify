@@ -5,9 +5,10 @@ const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
 
+const env = process.env.NODE_ENV
 
 const nextConfig = {
-  target: 'serverless',
+  target: env === 'production' ? 'serverless' : 'server',
 }
 
 module.exports = withPlugins([
