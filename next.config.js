@@ -3,6 +3,13 @@ const withImages = require('next-images')
 const withFonts = require('next-fonts')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
+const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
+
+const env = process.env.NODE_ENV
+
+const nextConfig = {
+  target: env === 'production' ? 'serverless' : 'server',
+}
 
 module.exports = withPlugins([
   [
@@ -11,9 +18,9 @@ module.exports = withPlugins([
       cssModules: true,
       cssLoaderOptions: {
         importLoaders: 1,
-        localIdentName: '[local]'
-      }
-    }
+        localIdentName: '[local]',
+      },
+    }, [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
   ],
   [
     withCSS,
@@ -21,15 +28,19 @@ module.exports = withPlugins([
       cssModules: true,
       cssLoaderOptions: {
         importLoaders: 1,
-        localIdentName: '[local]'
-      }
-    }
+        localIdentName: '[local]',
+      },
+    }, [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
   ],
   [
     withImages,
     {
-      inlineImageLimit: 0
-    }
+      inlineImageLimit: 0,
+    }, [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
   ],
-  withFonts
-])
+  [
+    withFonts,
+    {},
+    [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
+  ],
+], nextConfig)

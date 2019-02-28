@@ -1,7 +1,9 @@
-import { GraphQL } from '@graphite/server'
+const { GraphQL } = require('@graphite/server')
 
-export const Image = GraphQL('Image')({
+const Image = GraphQL('Image')({
   height: ['Int'],
   width: ['Int'],
   url: ['String'],
 })
+
+module.exports = { Image }

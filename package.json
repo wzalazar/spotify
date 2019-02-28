@@ -6,15 +6,20 @@
   "repository": "",
   "author": "Walter Zalazar",
   "scripts": {
-    "lint": "eslint -f table ./components ./config ./containers ./lib ./pages ./server || exit 1",
-    "lint:fix": "eslint --fix ./components ./config ./containers ./lib ./pages ./server || exit 1",
-    "start": "NODE_ENV=production node -r esm ./index.js",
-    "start:dev": "node -r esm ./index.js",
     "build": "next build",
+    "build:testing": " NODE_ENV=testing next build",
+    "start": "next start",
+    "dev": "next",
+    "start:server": "node index.js",
+    "start:all": "npm run dev & npm run start:server",
+    "start:dev": "npm run start:all & json-proxy -p 8080 -f '/graphql=http://localhost:4000' -f '/=http://localhost:3000' .",
+    "now-build": "next build",
+    "lint": "eslint -f table *.js || exit 1",
+    "lint:fix": "eslint --fix *.js || exit 1",
     "uml:architecture": "puml generate ./.uml/architecture.puml -o ./.uml/architecture.png",
     "semantic-release": "semantic-release",
     "test:unit": "jest",
-    "test:functional": "NODE_ENV=production testcafe ${RUNNER:-chrome:headless} tests/functional/features",
+    "test:functional": "NODE_ENV=testing testcafe ${RUNNER:-chrome:headless} tests/functional/features --app 'npm run start'",
     "coverage:unit": "jest --coverage"
   },
   "pre-push": [
@@ -41,6 +46,7 @@
     "redux-combine-actions": "0.1.2",
     "redux-observable": "1.0.0",
     "rxjs": "6.4.0",
+    "serverless-http": "1.9.1",
     "spotify-web-api-node": "4.0.0"
   },
   "devDependencies": {

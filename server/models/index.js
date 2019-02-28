@@ -1,9 +1,9 @@
-import { Album } from './Album'
-import { Artist } from './Artist'
-import { Image } from './Image'
-import { Track } from './Track'
+const { Album } = require('./Album')
+const { Artist } = require('./Artist')
+const { Image } = require('./Image')
+const { Track } = require('./Track')
 
-export {
+module.exports = {
   Album,
   Artist,
   Image,

@@ -1,9 +1,9 @@
-import { GraphQL } from '@graphite/server'
-import { get } from 'lodash'
+const { GraphQL } = require('@graphite/server')
+const { get } = require('lodash')
 
-import { loaderSearchArtist, loaderAlbumsByArtist } from '../loaders'
+const { loaderSearchArtist, loaderAlbumsByArtist  } = require('../loaders')
 
-export const Artist = GraphQL('Artist')({
+const Artist = GraphQL('Artist')({
   id: ['ID'],
   name: ['String'],
   genres: ['[String]'],
@@ -27,7 +27,10 @@ export const Artist = GraphQL('Artist')({
   },
 })
 
-export const mapArtist = (artist = {}) => {
+const mapArtist = (artist = {}) => {
   const followers = get(artist, 'followers.total', '0')
   return { ...artist, followers }
 }
+
+
+module.exports = { Artist, mapArtist }
