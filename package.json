@@ -79,7 +79,7 @@
     "json-proxy": "0.9.3",
     "next-compose-plugins": "2.1.1",
     "next-fonts": "0.16.0",
-    "next-images": "1.0.4",
+    "next-images": "1.1.0",
     "node-plantuml": "0.5.0",
     "node-sass": "4.5.3",
     "postcss": "7.0.7",
