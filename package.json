@@ -84,7 +84,7 @@
     "node-sass": "4.5.3",
     "postcss": "7.0.7",
     "postcss-easy-import": "3.0.0",
-    "postcss-js": "2.0.0",
+    "postcss-js": "2.0.1",
     "postcss-loader": "3.0.0",
     "raw-loader": "1.0.0",
     "react-addons": "0.9.1-deprecated",
