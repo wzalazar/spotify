@@ -27,7 +27,7 @@
     "test"
   ],
   "dependencies": {
-    "@graphite/server": "0.9.7",
+    "@graphite/server": "0.9.8",
     "annyang": "2.6.1",
     "dataloader": "1.4.0",
     "es6-promise": "4.2.5",
