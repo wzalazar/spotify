@@ -86,7 +86,7 @@
     "postcss-easy-import": "3.0.0",
     "postcss-js": "2.0.1",
     "postcss-loader": "3.0.0",
-    "raw-loader": "1.0.0",
+    "raw-loader": "2.0.0",
     "react-addons": "0.9.1-deprecated",
     "react-addons-test-utils": "15.5.1",
     "react-test-renderer": "16.8.6",
