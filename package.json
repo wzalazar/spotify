@@ -30,7 +30,7 @@
     "@graphite/server": "0.9.16",
     "annyang": "2.6.1",
     "dataloader": "1.4.0",
-    "es6-promise": "4.2.5",
+    "es6-promise": "4.2.8",
     "esm": "3.2.25",
     "ip": "1.1.5",
     "load-script": "1.0.0",
