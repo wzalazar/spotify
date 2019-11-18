@@ -95,7 +95,7 @@
     "redux-test-utils": "0.3.0",
     "regenerator-runtime": "0.13.3",
     "sass-loader": "7.3.1",
-    "semantic-release": "15.13.30",
+    "semantic-release": "15.13.31",
     "sinon": "7.5.0",
     "styled-jsx-plugin-sass": "1.0.0",
     "testcafe": "0.23.3"
