@@ -1,4 +1,4 @@
-FROM node:10.16.3
+FROM node:10.18.0
 
 RUN apt-get update && apt-get install yarn -y
 
