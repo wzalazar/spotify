@@ -46,7 +46,7 @@
     "redux-combine-actions": "0.1.2",
     "redux-observable": "1.2.0",
     "rxjs": "6.5.4",
-    "serverless-http": "1.10.1",
+    "serverless-http": "2.3.2",
     "spotify-web-api-node": "4.0.0"
   },
   "devDependencies": {
