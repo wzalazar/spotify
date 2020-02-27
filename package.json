@@ -62,7 +62,7 @@
     "@babel/register": "7.7.7",
     "@babel/runtime": "7.7.7",
     "@semantic-release/git": "7.0.18",
-    "@semantic-release/github": "5.5.5",
+    "@semantic-release/github": "5.5.8",
     "@zeit/next-css": "1.0.1",
     "@zeit/next-sass": "1.0.1",
     "autoprefixer": "9.7.3",
