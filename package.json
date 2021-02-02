@@ -47,7 +47,7 @@
     "redux-observable": "1.2.0",
     "rxjs": "6.6.2",
     "serverless-http": "1.10.1",
-    "spotify-web-api-node": "4.0.0"
+    "spotify-web-api-node": "5.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.10.0",
