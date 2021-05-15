@@ -94,7 +94,7 @@
     "redux-mock-store": "1.5.4",
     "redux-test-utils": "0.3.0",
     "regenerator-runtime": "0.13.7",
-    "sass-loader": "9.0.2",
+    "sass-loader": "11.1.1",
     "semantic-release": "17.1.1",
     "sinon": "9.0.1",
     "styled-jsx-plugin-sass": "1.0.0",
