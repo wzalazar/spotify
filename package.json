@@ -98,7 +98,7 @@
     "semantic-release": "17.1.1",
     "sinon": "9.0.1",
     "styled-jsx-plugin-sass": "1.0.0",
-    "testcafe": "0.23.3"
+    "testcafe": "1.18.3"
   },
   "jest": {
     "coverageDirectory": ".coverage",
